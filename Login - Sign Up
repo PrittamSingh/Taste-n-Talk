@@ -20,7 +20,7 @@
           <input type="text" required />
           <label>Username</label>
           <i class="fas fa-user"></i>
-        </div>
+        </div>    
         <div class="input-box animation" style="--i: 2; --j: 1;">
           <input type="password" required />
           <label>Password</label>
