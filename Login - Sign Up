@@ -1,0 +1,83 @@
+// HTMl Code
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Sign Up</title>
+  <link rel="stylesheet" href="./public/style.css">
+  <!-- <link rel="stylesheet" href="./signup.css"> -->
+  <link rel="stylesheet" href="./login.css">
+
+</head>
+<body> 
+  <div class="wrapper">
+    <!-- Login Form -->
+    <div class="form-box Login">
+      <form action="#">
+        <div class="input-box animation" style="--i: 1; --j: 2; background-image: url(./colorSplash.png);">
+          <input type="text" required />
+          <label>Username</label>
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="input-box animation" style="--i: 2; --j: 1;">
+          <input type="password" required />
+          <label>Password</label>
+          <i class="fas fa-lock"></i>
+        </div>
+        <div class="btn animation" style="--i: 3; --j: 4;">
+          <button>Login</button>
+        </div>
+        <div class="linkTxt animation" style="--i: 4; --j: 3;">
+          <p>Don’t have an account? <a href="#" class="register-link">Sign up</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div class="form-box register">
+      <form action="#">
+        <div class="input-box animation" style="--i: 1; --j: 2;">
+          <input type="text" required />
+          <label>Username</label>
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="input-box animation" style="--i: 2; --j: 1;">
+          <input type="email" required />
+          <label>Email</label>
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="input-box animation" style="--i: 3; --j: 2;">
+          <input type="password" required />
+          <label>Password</label>
+          <i class="fas fa-lock"></i>
+        </div>
+        <div class="btn animation" style="--i: 4; --j: 5;">
+          <button>Sign Up</button>
+        </div>
+        <div class="linkTxt animation" style="--i: 5; --j: 4;">
+          <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to toggle between login and sign-up forms
+    const wrapper = document.querySelector('.wrapper');
+    const registerLink = document.querySelector('.register-link');
+    const loginLink = document.querySelector('.login-link');
+
+    registerLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      wrapper.classList.add('active');
+    });
+
+    loginLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      wrapper.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
